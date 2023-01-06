@@ -16,4 +16,4 @@ spec:
       - name: demo
         image: nginx:1.23.3
         ports:
-        - containerPort: 8080
+        - containerPort: 80
