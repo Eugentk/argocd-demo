@@ -3,12 +3,14 @@ kind: Application
 metadata:
   name: demo-argo-application
   namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
  
   source:
     repoURL: https://github.com/Eugentk/argocd-demo.git
-    targetRevision: HEAD
+    targetRevision: main
     path: demo
   destination: 
     server: https://kubernetes.default.svc
@@ -20,3 +22,5 @@ spec:
     automated:
       selfHeal: true
       prune: true
+
+
