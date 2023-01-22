@@ -15,7 +15,7 @@ spec:
     helm:
       parameters:
       - name: "controller.replicaCount"
-        value: "2"
+        value: "4"
       - name: "controller.service.type"
         value: "NodePort"
 
